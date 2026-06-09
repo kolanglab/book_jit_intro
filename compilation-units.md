@@ -430,8 +430,8 @@ ctx2 = ctx1.merge(y: :Integer)              # B2 へ渡る型コンテキスト
 [ctx1, ctx2].each_with_index do |ctx, i|
   puts "B#{i+1} 版の入口型コンテキスト: #{ctx.inspect}  → ガード: なし"
 end
-# => B1 版の入口型コンテキスト: {:x=>:Integer}            → ガード: なし
-#    B2 版の入口型コンテキスト: {:x=>:Integer, :y=>:Integer} → ガード: なし
+# => B1 版の入口型コンテキスト: {x: :Integer}              → ガード: なし
+#    B2 版の入口型コンテキスト: {x: :Integer, y: :Integer} → ガード: なし
 ```
 
 最初の 1 回のガードだけで、後続のブロック群から型チェックがまとめて
