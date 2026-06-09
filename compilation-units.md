@@ -403,7 +403,7 @@ puts c.code_for(:blkA, { x: :Integer })  # 既出 → 同じ版を使い回す
 puts c.code_for(:blkA, { x: :Float })    # 別の型 → 別の版を生成
 # => SPECIAL[x:Integer]: add_int(x, 1)   # no guard
 #    SPECIAL[x:Integer]: add_int(x, 1)   # no guard   ← 再コンパイルなし
-#    SPECIAL[{:x=>:Float}]: generic_add(x, 1); guard?
+#    SPECIAL[{x: :Float}]: generic_add(x, 1); guard?
 ```
 
 注目すべきは `x: Integer` 版に **ガードが現れない** ことです。上流のブロックで
