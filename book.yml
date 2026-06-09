@@ -39,3 +39,10 @@ chapters:
       - beyond-languages.md
   - appendix:
     - glossary.md
+
+repository: "https://github.com/kolanglab/book_jit_intro"
+
+site_url: "https://kolanglab.github.io/book_jit_intro/"
+
+github_review:
+  enabled: true
