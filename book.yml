@@ -1,5 +1,5 @@
 title: "JITコンパイル入門"
-description: "言語処理系の JIT コンパイルを、なぜ速くなるのかという原理から、トレーシング・メタトレーシング・階層的JIT・デオプティマイズといった技法、最新研究、各処理系のケーススタディまで、動くコードで一気に見渡す地図"
+description: "言語処理系の JIT コンパイルを、なぜ速くなるのかという原理から、トレーシング・メタトレーシング・階層的JIT・脱最適化といった技法、最新研究、各処理系のケーススタディまで、動くコードで一気に見渡す地図"
 author: "ligarb AI"
 language: "ja"
 ai_generated: true
@@ -18,6 +18,8 @@ chapters:
       - meta-tracing.md
       - tiered.md
       - deopt-osr.md
+      - gc-runtime.md
+      - security.md
       - frameworks.md
   - part: part-research.md
     chapters:
@@ -34,5 +36,6 @@ chapters:
       - case-python.md
       - case-luajit.md
       - case-others.md
+      - beyond-languages.md
   - appendix:
     - glossary.md
