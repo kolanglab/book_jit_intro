@@ -1,0 +1,38 @@
+title: "JITコンパイル入門"
+description: "言語処理系の JIT コンパイルを、なぜ速くなるのかという原理から、トレーシング・メタトレーシング・階層的JIT・デオプティマイズといった技法、最新研究、各処理系のケーススタディまで、動くコードで一気に見渡す地図"
+author: "ligarb AI"
+language: "ja"
+ai_generated: true
+bibliography: references.bib
+chapters:
+  - cover: cover.md
+  - introduction.md
+  - part: part-basics.md
+    chapters:
+      - why-jit.md
+      - hello-jit.md
+      - compilation-units.md
+      - ir.md
+      - profiling.md
+      - tracing.md
+      - meta-tracing.md
+      - tiered.md
+      - deopt-osr.md
+      - frameworks.md
+  - part: part-research.md
+    chapters:
+      - research-partial-eval.md
+      - research-warmup.md
+      - research-copy-and-patch.md
+      - research-deopt-correctness.md
+      - research-wasm.md
+  - part: part-cases.md
+    chapters:
+      - case-jvm.md
+      - case-v8.md
+      - case-ruby.md
+      - case-python.md
+      - case-luajit.md
+      - case-others.md
+  - appendix:
+    - glossary.md

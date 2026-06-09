@@ -1,0 +1,357 @@
+% JITコンパイル入門 参考文献
+
+% --- 古典・歴史 ---
+
+@article{futamura1971,
+  author = {Yoshihiko Futamura},
+  title = {Partial Evaluation of Computation Process — An Approach to a Compiler-Compiler},
+  journal = {Systems, Computers, Controls},
+  volume = {2},
+  number = {5},
+  pages = {45--50},
+  year = {1971},
+  note = {Reprinted in Higher-Order and Symbolic Computation, 12(4):381--391, 1999},
+  doi = {10.1023/A:1010095604496}
+}
+
+@inproceedings{deutsch1984,
+  author = {L. Peter Deutsch and Allan M. Schiffman},
+  title = {Efficient Implementation of the Smalltalk-80 System},
+  booktitle = {Proceedings of the 11th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (POPL '84)},
+  pages = {297--302},
+  year = {1984},
+  doi = {10.1145/800017.800542}
+}
+
+@inproceedings{chambers1989,
+  author = {Craig Chambers and David Ungar},
+  title = {Customization: Optimizing Compiler Technology for SELF, a Dynamically-Typed Object-Oriented Programming Language},
+  booktitle = {Proceedings of the ACM SIGPLAN 1989 Conference on Programming Language Design and Implementation (PLDI '89)},
+  pages = {146--160},
+  year = {1989},
+  doi = {10.1145/73141.74831}
+}
+
+@article{cytron1991,
+  author = {Ron Cytron and Jeanne Ferrante and Barry K. Rosen and Mark N. Wegman and F. Kenneth Zadeck},
+  title = {Efficiently Computing Static Single Assignment Form and the Control Dependence Graph},
+  journal = {ACM Transactions on Programming Languages and Systems},
+  volume = {13},
+  number = {4},
+  pages = {451--490},
+  year = {1991},
+  doi = {10.1145/115372.115320}
+}
+
+@inproceedings{holzle1992,
+  author = {Urs Hölzle and Craig Chambers and David Ungar},
+  title = {Debugging Optimized Code with Dynamic Deoptimization},
+  booktitle = {Proceedings of the ACM SIGPLAN 1992 Conference on Programming Language Design and Implementation (PLDI '92)},
+  pages = {32--43},
+  year = {1992},
+  doi = {10.1145/143095.143114}
+}
+
+@inproceedings{holzle1994,
+  author = {Urs Hölzle and David Ungar},
+  title = {Optimizing Dynamically-Dispatched Calls with Run-Time Type Feedback},
+  booktitle = {Proceedings of the ACM SIGPLAN 1994 Conference on Programming Language Design and Implementation (PLDI '94)},
+  pages = {326--336},
+  year = {1994},
+  doi = {10.1145/178243.178478}
+}
+
+@inproceedings{click1995,
+  author = {Cliff Click and Michael Paleczny},
+  title = {A Simple Graph-Based Intermediate Representation},
+  booktitle = {Papers from the 1995 ACM SIGPLAN Workshop on Intermediate Representations (IR '95)},
+  pages = {35--49},
+  year = {1995},
+  doi = {10.1145/202529.202534}
+}
+
+@article{poletto1999,
+  author = {Massimiliano Poletto and Vivek Sarkar},
+  title = {Linear Scan Register Allocation},
+  journal = {ACM Transactions on Programming Languages and Systems},
+  volume = {21},
+  number = {5},
+  pages = {895--913},
+  year = {1999},
+  doi = {10.1145/330249.330250}
+}
+
+@inproceedings{bala2000,
+  author = {Vasanth Bala and Evelyn Duesterwald and Sanjeev Banerjia},
+  title = {Dynamo: A Transparent Dynamic Optimization System},
+  booktitle = {Proceedings of the ACM SIGPLAN 2000 Conference on Programming Language Design and Implementation (PLDI '00)},
+  pages = {1--12},
+  year = {2000},
+  doi = {10.1145/349299.349303}
+}
+
+@inproceedings{arnold2000,
+  author = {Matthew Arnold and Stephen Fink and David Grove and Michael Hind and Peter F. Sweeney},
+  title = {Adaptive Optimization in the Jalapeño JVM},
+  booktitle = {Proceedings of the 15th ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA '00)},
+  pages = {47--65},
+  year = {2000},
+  doi = {10.1145/353171.353175}
+}
+
+@article{suganuma2000,
+  author = {Toshio Suganuma and Takeshi Ogasawara and Mikio Takeuchi and Toshiaki Yasue and Motohiro Kawahito and Kazuaki Ishizaki and Hideaki Komatsu and Toshio Nakatani},
+  title = {Overview of the IBM Java Just-in-Time Compiler},
+  journal = {IBM Systems Journal},
+  volume = {39},
+  number = {1},
+  pages = {175--193},
+  year = {2000},
+  doi = {10.1147/sj.391.0175}
+}
+
+@inproceedings{paleczny2001,
+  author = {Michael Paleczny and Christopher Vick and Cliff Click},
+  title = {The Java HotSpot Server Compiler},
+  booktitle = {Proceedings of the 2001 Symposium on JavaTM Virtual Machine Research and Technology Symposium (JVM '01)},
+  pages = {1--12},
+  year = {2001},
+  publisher = {USENIX Association}
+}
+
+@article{aycock2003,
+  author = {John Aycock},
+  title = {A Brief History of Just-in-Time},
+  journal = {ACM Computing Surveys},
+  volume = {35},
+  number = {2},
+  pages = {97--113},
+  year = {2003},
+  doi = {10.1145/857076.857077}
+}
+
+@inproceedings{lattner2004,
+  author = {Chris Lattner and Vikram Adve},
+  title = {LLVM: A Compilation Framework for Lifelong Program Analysis \& Transformation},
+  booktitle = {Proceedings of the International Symposium on Code Generation and Optimization (CGO '04)},
+  pages = {75--86},
+  year = {2004},
+  doi = {10.1109/CGO.2004.1281665}
+}
+
+% --- トレーシング JIT / メタトレーシング ---
+
+@inproceedings{gal2006,
+  author = {Andreas Gal and Christian W. Probst and Michael Franz},
+  title = {HotpathVM: An Effective JIT Compiler for Resource-Constrained Devices},
+  booktitle = {Proceedings of the 2nd International Conference on Virtual Execution Environments (VEE '06)},
+  pages = {144--153},
+  year = {2006},
+  doi = {10.1145/1134760.1134780}
+}
+
+@inproceedings{bolz2009,
+  author = {Carl Friedrich Bolz and Antonio Cuni and Maciej Fijalkowski and Armin Rigo},
+  title = {Tracing the Meta-Level: PyPy's Tracing JIT Compiler},
+  booktitle = {Proceedings of the 4th Workshop on the Implementation, Compilation, Optimization of Object-Oriented Languages and Programming Systems (ICOOOLPS '09)},
+  pages = {18--25},
+  year = {2009},
+  doi = {10.1145/1565824.1565827}
+}
+
+@inproceedings{gal2009,
+  author = {Andreas Gal and Brendan Eich and Mike Shaver and David Anderson and David Mandelin and Mohammad R. Haghighat and Blake Kaplan and Graydon Hoare and Boris Zbarsky and Jason Orendorff and Jesse Ruderman and Edwin W. Smith and Rick Reitmaier and Michael Bebenita and Mason Chang and Michael Franz},
+  title = {Trace-based Just-in-Time Type Specialization for Dynamic Languages},
+  booktitle = {Proceedings of the 30th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '09)},
+  pages = {465--478},
+  year = {2009},
+  doi = {10.1145/1542476.1542528}
+}
+
+@article{bolz2015,
+  author = {Carl Friedrich Bolz and Laurence Tratt},
+  title = {The Impact of Meta-Tracing on VM Design and Implementation},
+  journal = {Science of Computer Programming},
+  volume = {98},
+  pages = {408--421},
+  year = {2015},
+  doi = {10.1016/j.scico.2013.02.001}
+}
+
+% --- 部分評価 / Truffle / Graal ---
+
+@inproceedings{wurthinger2012,
+  author = {Thomas Würthinger and Andreas Wöß and Lukas Stadler and Gilles Duboscq and Doug Simon and Christian Wimmer},
+  title = {Self-Optimizing AST Interpreters},
+  booktitle = {Proceedings of the 8th Symposium on Dynamic Languages (DLS '12)},
+  pages = {73--82},
+  year = {2012},
+  doi = {10.1145/2384577.2384587}
+}
+
+@inproceedings{wurthinger2013,
+  author = {Thomas Würthinger and Christian Wimmer and Andreas Wöß and Lukas Stadler and Gilles Duboscq and Christian Humer and Gregor Richards and Doug Simon and Mario Wolczko},
+  title = {One VM to Rule Them All},
+  booktitle = {Proceedings of the 2013 ACM International Symposium on New Ideas, New Paradigms, and Reflections on Programming \& Software (Onward! 2013)},
+  pages = {187--204},
+  year = {2013},
+  doi = {10.1145/2509578.2509581}
+}
+
+@inproceedings{duboscq2013,
+  author = {Gilles Duboscq and Thomas Würthinger and Lukas Stadler and Christian Wimmer and Doug Simon and Hanspeter Mössenböck},
+  title = {An Intermediate Representation for Speculative Optimizations in a Dynamic Compiler},
+  booktitle = {Proceedings of the 7th ACM Workshop on Virtual Machines and Intermediate Languages (VMIL '13)},
+  pages = {1--10},
+  year = {2013},
+  doi = {10.1145/2542142.2542143}
+}
+
+@inproceedings{wurthinger2017,
+  author = {Thomas Würthinger and Christian Wimmer and Christian Humer and Andreas Wöß and Lukas Stadler and Chris Seaton and Gilles Duboscq and Doug Simon and Matthias Grimmer},
+  title = {Practical Partial Evaluation for High-Performance Dynamic Language Runtimes},
+  booktitle = {Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '17)},
+  pages = {662--676},
+  year = {2017},
+  doi = {10.1145/3062341.3062381}
+}
+
+% --- ウォームアップ / 正しさ / 最新研究 ---
+
+@article{barrett2017,
+  author = {Edd Barrett and Carl Friedrich Bolz-Tereick and Rebecca Killick and Sarah Mount and Laurence Tratt},
+  title = {Virtual Machine Warmup Blows Hot and Cold},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {1},
+  number = {OOPSLA},
+  pages = {1--27},
+  year = {2017},
+  doi = {10.1145/3133876}
+}
+
+@article{fluckiger2018,
+  author = {Olivier Flückiger and Gabriel Scherer and Ming-Ho Yee and Aviral Goel and Amal Ahmed and Jan Vitek},
+  title = {Correctness of Speculative Optimizations with Dynamic Deoptimization},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {2},
+  number = {POPL},
+  pages = {1--28},
+  year = {2018},
+  doi = {10.1145/3158137}
+}
+
+@article{xu2021,
+  author = {Haoran Xu and Fredrik Kjolstad},
+  title = {Copy-and-Patch Compilation: A Fast Compilation Algorithm for High-Level Languages and Bytecode},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {5},
+  number = {OOPSLA},
+  pages = {1--30},
+  year = {2021},
+  doi = {10.1145/3485513}
+}
+
+% --- WebAssembly ---
+
+@inproceedings{haas2017,
+  author = {Andreas Haas and Andreas Rossberg and Derek L. Schuff and Ben L. Titzer and Michael Holman and Dan Gohman and Luke Wagner and Alon Zakai and JF Bastien},
+  title = {Bringing the Web up to Speed with WebAssembly},
+  booktitle = {Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '17)},
+  pages = {185--200},
+  year = {2017},
+  doi = {10.1145/3062341.3062363}
+}
+
+% --- Ruby / 基本ブロックバージョニング ---
+
+@inproceedings{chevalier2015,
+  author = {Maxime Chevalier-Boisvert and Marc Feeley},
+  title = {Simple and Effective Type Check Removal through Lazy Basic Block Versioning},
+  booktitle = {29th European Conference on Object-Oriented Programming (ECOOP 2015)},
+  pages = {101--123},
+  year = {2015},
+  doi = {10.4230/LIPIcs.ECOOP.2015.101}
+}
+
+@inproceedings{chevalier2021,
+  author = {Maxime Chevalier-Boisvert and Noah Gibbs and Jean Boussier and Si Xing Wu and Aaron Patterson and Kevin Newton and John Hawthorn},
+  title = {YJIT: A Basic Block Versioning JIT Compiler for CRuby},
+  booktitle = {Proceedings of the 13th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages (VMIL '21)},
+  pages = {25--32},
+  year = {2021},
+  doi = {10.1145/3486606.3486781}
+}
+
+% --- ウェブ資料 / ドキュメント ---
+
+@misc{pep659,
+  author = {Mark Shannon},
+  title = {PEP 659 — Specializing Adaptive Interpreter},
+  year = {2021},
+  howpublished = {Python Enhancement Proposal},
+  url = {https://peps.python.org/pep-0659/}
+}
+
+@misc{cpython313jit,
+  author = {Brandt Bucher},
+  title = {PEP 744 — JIT Compilation},
+  year = {2024},
+  howpublished = {Python Enhancement Proposal},
+  url = {https://peps.python.org/pep-0744/}
+}
+
+@misc{luajit,
+  author = {Mike Pall},
+  title = {The LuaJIT Project},
+  year = {2005},
+  howpublished = {Web site},
+  url = {https://luajit.org/}
+}
+
+@misc{makarov_mir,
+  author = {Vladimir Makarov},
+  title = {MIR: A Lightweight JIT Compiler Project},
+  year = {2020},
+  howpublished = {Red Hat Developer Blog},
+  url = {https://developers.redhat.com/blog/2020/01/20/mir-a-lightweight-jit-compiler-project}
+}
+
+@misc{cranelift,
+  author = {{Bytecode Alliance}},
+  title = {Cranelift Code Generator},
+  year = {2024},
+  howpublished = {Project documentation},
+  url = {https://cranelift.dev/}
+}
+
+@misc{dynasm,
+  author = {Mike Pall},
+  title = {DynASM: A Dynamic Assembler for Code Generation Engines},
+  year = {2005},
+  howpublished = {LuaJIT documentation},
+  url = {https://luajit.org/dynasm.html}
+}
+
+@misc{v8maglev,
+  author = {{The V8 Team}},
+  title = {Maglev — V8's Fastest Optimizing JIT},
+  year = {2023},
+  howpublished = {V8 Developer Blog},
+  url = {https://v8.dev/blog/maglev}
+}
+
+@misc{v8sparkplug,
+  author = {{The V8 Team}},
+  title = {Sparkplug — A Non-Optimizing JavaScript Compiler},
+  year = {2021},
+  howpublished = {V8 Developer Blog},
+  url = {https://v8.dev/blog/sparkplug}
+}
+
+@book{aho2006,
+  author = {Alfred V. Aho and Monica S. Lam and Ravi Sethi and Jeffrey D. Ullman},
+  title = {Compilers: Principles, Techniques, and Tools},
+  edition = {2nd},
+  publisher = {Addison-Wesley},
+  year = {2006}
+}
