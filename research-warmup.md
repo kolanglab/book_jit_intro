@@ -170,11 +170,13 @@ ART](case-others.md) が端末のアイドル時に AOT を回して次回起動
 
 純粋な AOT（事前コンパイル）は起動が速い代わりに、[なぜ JIT か](why-jit.md)で
 見た「実行時の観測に基づく投機」ができません。純粋な JIT はその逆です。
-そこで現代の処理系は、**両者を組み合わせ**ます。GraalVM の Native Image は
-[Truffle](research-partial-eval.md)処理系を AOT コンパイルして瞬時に起動
-できるようにし、しかも**初期化をビルド時に済ませてヒープごと焼き込む**ことで
-起動を極限まで速めつつ[](#cite:wimmer2019)、実行時には JIT で更に最適化する道を
-残します。CPython
+そこで現代の処理系は、**両者を組み合わせ**ます。GraalVM の Native Image は、
+アプリを**閉世界仮定の AOT** でネイティブ実行ファイルにし、**初期化をビルド時に
+済ませてヒープごと焼き込む**ことで、起動を極限まで速くしメモリも抑えます
+[](#cite:wimmer2019)（その代わり、ホスト側の JIT は基本的に持ちません）。
+ただし [Truffle](research-partial-eval.md) 言語を Native Image 化した場合は、
+**ゲスト言語のコードは実行時に JIT で最適化し続けられます**（Truffle の部分
+評価が実行時にも働くため）。CPython
 3.13 の JIT（[次章](research-copy-and-patch.md)で扱う Copy-and-Patch）も、
 「起動が軽い JIT」を志向した設計です。
 
