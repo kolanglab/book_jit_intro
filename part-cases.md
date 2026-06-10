@@ -8,10 +8,10 @@
   Sea of Nodes、そして Graal による刷新。
 - **V8** —— JavaScript を四段（Ignition / Sparkplug / Maglev / TurboFan）で
   速くする、ヒドゥンクラスとインラインキャッシュの王国。
-- **Ruby** —— YJIT（基本ブロックバージョニング）と、その先の ZJIT。
+- **Ruby** —— YJIT（基本ブロックバージョニング）と、Ruby 4.0 の実験的な ZJIT。
   Ruby 固有のオブジェクトモデルにどう寄り添うか。
 - **Python（PyPy / CPython）** —— メタトレーシングの PyPy と、
-  公式に JIT を載せた CPython 3.13 の Copy-and-Patch。
+  CPython 3.13 以降の実験的 Copy-and-Patch JIT。
 - **LuaJIT** —— 一人の天才が作り上げた、トレーシング JIT の到達点。
 - **その他の処理系** —— JavaScriptCore・.NET・Julia・Dart・Android ART・
   Self まで、地図の余白を埋めます。

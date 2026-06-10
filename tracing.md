@@ -282,6 +282,8 @@ TR = [
 移します。
 
 ```ruby
+require 'set'
+
 WRITES = { mov: 0, add: 0, lt: 0, len: 0, idx: 0, mul: 0 }  # insn[1] へ書く命令
 def writes_var(insn) = WRITES.key?(insn[0]) ? insn[1] : nil
 # その命令が読む変数（Symbol）を列挙
@@ -608,6 +610,8 @@ end
 この登録簿を**ブラックリスト**（blacklist）と呼びます。
 
 ```ruby
+require 'set'
+
 class Recorder
   ABORT_LIMIT = 3
   def initialize = (@aborts = Hash.new(0); @blacklist = Set.new)
@@ -677,6 +681,8 @@ TR2 = [
 どの変数から来たか」を上から追うだけで実現できます。
 
 ```ruby
+require 'set'
+
 def sink_allocations(trace)
   fields  = {}    # 生きている確保: p => { 0 => :i, 1 => :d }
   escaped = Set.new
