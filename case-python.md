@@ -286,7 +286,7 @@ _BINARY_OP_ADD_INT   # 生の整数として加算
 いう要求への、CPython なりの回答です。
 
 **例えばこうします。**CPython のステンシル方式の具体は、マイクロオペ
-1 つにステンシル 1 つ、という**一対一**にした点にあります。[Copy-and-Patch の章](research-copy-and-patch.md)で作った玩具では
+1 つにステンシル 1 つ、という**一対一対応**にした点にあります。[Copy-and-Patch の章](research-copy-and-patch.md)で作った玩具では
 バイトコード 1 命令にステンシル 1 つを対応させましたが、CPython は
 Tier 2 の**マイクロオペ 1 つ**ごとにステンシルを 1 つ用意します。
 `_GUARD_BOTH_INT` のステンシル、`_BINARY_OP_ADD_INT` のステンシル…という
