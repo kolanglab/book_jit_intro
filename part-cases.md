@@ -4,7 +4,7 @@
 技法が、現実の制約（互換性、開発リソース、対象言語の性質）のなかで
 どう組み合わされ、どう取捨選択されているかを観察します。
 
-- **JVM（HotSpot / GraalVM）** —— JIT 研究の本流。C1・C2 の二段構成と
+- **JVM（HotSpot / GraalVM）** —— JIT 研究の本流。C1・C2 の二つのコンパイラと
   Sea of Nodes、そして Graal による刷新。
 - **V8** —— JavaScript を四段（Ignition / Sparkplug / Maglev / TurboFan）で
   速くする、ヒドゥンクラスとインラインキャッシュの王国。

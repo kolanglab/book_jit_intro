@@ -99,17 +99,6 @@
   doi = {10.1145/353171.353175}
 }
 
-@article{suganuma2000,
-  author = {Toshio Suganuma and Takeshi Ogasawara and Mikio Takeuchi and Toshiaki Yasue and Motohiro Kawahito and Kazuaki Ishizaki and Hideaki Komatsu and Toshio Nakatani},
-  title = {Overview of the IBM Java Just-in-Time Compiler},
-  journal = {IBM Systems Journal},
-  volume = {39},
-  number = {1},
-  pages = {175--193},
-  year = {2000},
-  doi = {10.1147/sj.391.0175}
-}
-
 @inproceedings{paleczny2001,
   author = {Michael Paleczny and Christopher Vick and Cliff Click},
   title = {The Java HotSpot Server Compiler},
@@ -293,7 +282,7 @@
 }
 
 @misc{cpython313jit,
-  author = {Brandt Bucher},
+  author = {Brandt Bucher and Savannah Ostrowski},
   title = {PEP 744 — JIT Compilation},
   year = {2024},
   howpublished = {Python Enhancement Proposal},
@@ -407,13 +396,10 @@
   doi = {10.1145/1176617.1176753}
 }
 
-@article{georges2007,
+@inproceedings{georges2007,
   author = {Andy Georges and Dries Buytaert and Lieven Eeckhout},
   title = {Statistically Rigorous Java Performance Evaluation},
   booktitle = {Proceedings of the 22nd ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA '07)},
-  journal = {ACM SIGPLAN Notices},
-  volume = {42},
-  number = {10},
   pages = {57--76},
   year = {2007},
   doi = {10.1145/1297027.1297033}
@@ -445,7 +431,7 @@
   booktitle = {Proceedings of the 12th Annual IEEE/ACM International Symposium on Code Generation and Optimization (CGO '14)},
   pages = {165--174},
   year = {2014},
-  doi = {10.1145/2581122.2544157}
+  doi = {10.1145/2544137.2544157}
 }
 
 @inproceedings{prokopec2017,
@@ -498,4 +484,262 @@
   title = {What's New In Python 3.14},
   year = {2025},
   url = {https://docs.python.org/3/whatsnew/3.14.html}
+}
+
+% --- 2026-06-10 全章レビュー反映で追加 ---
+
+% 第1班（cover / introduction / part-basics / why-jit / hello-jit）追加文献
+% hello-jit.md のバックパッチ＝リンカの再配置の典拠を aho2006 から差し替え。
+% 書誌確認: Morgan Kaufmann, 2000, ISBN 1-55860-496-0（The Morgan Kaufmann
+% Series in Software Engineering and Programming, 272 pages）
+
+@book{levine2000,
+  author = {John R. Levine},
+  title = {Linkers and Loaders},
+  publisher = {Morgan Kaufmann},
+  year = {2000},
+  isbn = {1-55860-496-0}
+}
+% 第2班（compilation-units.md / ir.md）追加分。references.bib への統合用。
+% キー衝突なしを grep で確認済み（hack2006 / suganuma2003 / v8turboshaft）。
+
+@inproceedings{hack2006,
+  author = {Sebastian Hack and Daniel Grund and Gerhard Goos},
+  title = {Register Allocation for Programs in SSA-Form},
+  booktitle = {Proceedings of the 15th International Conference on Compiler Construction (CC 2006)},
+  series = {Lecture Notes in Computer Science},
+  volume = {3923},
+  pages = {247--262},
+  year = {2006},
+  doi = {10.1007/11688839_20}
+}
+
+@inproceedings{suganuma2003,
+  author = {Toshio Suganuma and Toshiaki Yasue and Toshio Nakatani},
+  title = {A Region-Based Compilation Technique for a Java Just-in-Time Compiler},
+  booktitle = {Proceedings of the ACM SIGPLAN 2003 Conference on Programming Language Design and Implementation (PLDI '03)},
+  pages = {312--323},
+  year = {2003},
+  doi = {10.1145/781131.781166}
+}
+
+@misc{v8turboshaft,
+  author = {Darius Mercadier},
+  title = {Land Ahoy: Leaving the Sea of Nodes},
+  year = {2025},
+  howpublished = {V8 Developer Blog},
+  url = {https://v8.dev/blog/leaving-the-sea-of-nodes}
+}
+% 第3班（profiling / tracing / meta-tracing）追加分。references.bib への統合用。
+% キー衝突なしを grep で確認済み（bolz2011 / mytkowicz2010）。
+
+@inproceedings{bolz2011,
+  author = {Carl Friedrich Bolz and Antonio Cuni and Maciej Fijalkowski and Michael Leuschel and Samuele Pedroni and Armin Rigo},
+  title = {Allocation Removal by Partial Evaluation in a Tracing JIT},
+  booktitle = {Proceedings of the 20th ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation (PEPM '11)},
+  pages = {43--52},
+  year = {2011},
+  doi = {10.1145/1929501.1929508}
+}
+
+@inproceedings{mytkowicz2010,
+  author = {Todd Mytkowicz and Amer Diwan and Matthias Hauswirth and Peter F. Sweeney},
+  title = {Evaluating the Accuracy of Java Profilers},
+  booktitle = {Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '10)},
+  pages = {187--197},
+  year = {2010},
+  doi = {10.1145/1806596.1806618}
+}
+@misc{pizlo2020,
+  author = {Filip Pizlo},
+  title = {Speculation in JavaScriptCore},
+  year = {2020},
+  howpublished = {WebKit Blog},
+  url = {https://webkit.org/blog/10308/speculation-in-javascriptcore/}
+}
+% 第5班（gc-runtime / security / frameworks）追加分
+% 統合時に references.bib へ移すこと。キー衝突は確認済み（2026-06-10 時点）。
+
+@inproceedings{kocher2019,
+  author = {Paul Kocher and Jann Horn and Anders Fogh and Daniel Genkin and Daniel Gruss and Werner Haas and Mike Hamburg and Moritz Lipp and Stefan Mangard and Thomas Prescher and Michael Schwarz and Yuval Yarom},
+  title = {Spectre Attacks: Exploiting Speculative Execution},
+  booktitle = {Proceedings of the 2019 IEEE Symposium on Security and Privacy (SP)},
+  pages = {1--19},
+  year = {2019},
+  doi = {10.1109/SP.2019.00002}
+}
+
+@misc{mcilroy2019,
+  author = {Ross Mcilroy and Jaroslav Sevcik and Tobias Tebbi and Ben L. Titzer and Toon Verwaest},
+  title = {Spectre is here to stay: An analysis of side-channels and speculative execution},
+  year = {2019},
+  howpublished = {arXiv:1902.05178},
+  url = {https://arxiv.org/abs/1902.05178}
+}
+
+@inproceedings{blazakis2010,
+  author = {Dionysus Blazakis},
+  title = {Interpreter Exploitation},
+  booktitle = {Proceedings of the 4th USENIX Workshop on Offensive Technologies (WOOT '10)},
+  year = {2010},
+  url = {https://www.usenix.org/legacy/events/woot10/tech/full_papers/Blazakis.pdf}
+}
+% 注: Black Hat DC 2010 発表「Interpreter Exploitation: Pointer Inference and JIT Spraying」と同内容。
+% 一次資料として原文 PDF（XOR 連鎖と 0x3C/CMP AL の逸話、JIT スプレーの命名）を照合済み。
+@inproceedings{jones1985,
+  author = {Neil D. Jones and Peter Sestoft and Harald S{\o}ndergaard},
+  title = {An Experiment in Partial Evaluation: The Generation of a Compiler Generator},
+  booktitle = {Rewriting Techniques and Applications (RTA '85)},
+  series = {Lecture Notes in Computer Science},
+  volume = {202},
+  pages = {124--140},
+  year = {1985},
+  doi = {10.1007/3-540-15976-2_6}
+}
+
+@inproceedings{humer2014,
+  author = {Christian Humer and Christian Wimmer and Christian Wirth and Andreas W{\"o}{\ss} and Thomas W{\"u}rthinger},
+  title = {A Domain-Specific Language for Building Self-Optimizing AST Interpreters},
+  booktitle = {Proceedings of the 2014 International Conference on Generative Programming: Concepts and Experiences (GPCE 2014)},
+  pages = {123--132},
+  year = {2014},
+  doi = {10.1145/2658761.2658776}
+}
+
+@inproceedings{kalibera2013,
+  author = {Tomas Kalibera and Richard E. Jones},
+  title = {Rigorous Benchmarking in Reasonable Time},
+  booktitle = {Proceedings of the 2013 ACM SIGPLAN International Symposium on Memory Management (ISMM 2013)},
+  pages = {63--74},
+  year = {2013},
+  doi = {10.1145/2464157.2464160}
+}
+
+@inproceedings{khrabrov2022,
+  author = {Alexey Khrabrov and Marius Pirvu and Vijay Sundaresan and Eyal de Lara},
+  title = {JITServer: Disaggregated Caching JIT Compiler for the JVM in the Cloud},
+  booktitle = {2022 USENIX Annual Technical Conference (USENIX ATC 22)},
+  pages = {869--884},
+  year = {2022},
+  url = {https://www.usenix.org/conference/atc22/presentation/khrabrov}
+}
+
+@inproceedings{bellard2005,
+  author = {Fabrice Bellard},
+  title = {QEMU, a Fast and Portable Dynamic Translator},
+  booktitle = {Proceedings of the 2005 USENIX Annual Technical Conference, FREENIX Track},
+  pages = {41--46},
+  year = {2005},
+  url = {https://www.usenix.org/legacy/event/usenix05/tech/freenix/full_papers/bellard/bellard.pdf}
+}
+
+@misc{xu2024,
+  author = {Haoran Xu and Fredrik Kjolstad},
+  title = {Deegen: A JIT-Capable VM Generator for Dynamic Languages},
+  year = {2024},
+  howpublished = {arXiv:2411.11469},
+  url = {https://arxiv.org/abs/2411.11469}
+}
+
+@article{barriere2021,
+  author = {Aur{\`e}le Barri{\`e}re and Sandrine Blazy and Olivier Fl{\"u}ckiger and David Pichardie and Jan Vitek},
+  title = {Formally Verified Speculation and Deoptimization in a JIT Compiler},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {5},
+  number = {POPL},
+  pages = {26:1--26:26},
+  year = {2021},
+  doi = {10.1145/3434327}
+}
+
+@inproceedings{webb2021,
+  author = {Brae J. Webb and Mark Utting and Ian J. Hayes},
+  title = {A Formal Semantics of the GraalVM Intermediate Representation},
+  booktitle = {Automated Technology for Verification and Analysis (ATVA 2021)},
+  series = {Lecture Notes in Computer Science},
+  volume = {12971},
+  pages = {111--126},
+  year = {2021},
+  doi = {10.1007/978-3-030-88885-5_8}
+}
+
+@inproceedings{nelson2020,
+  author = {Luke Nelson and Jacob {Van Geffen} and Emina Torlak and Xi Wang},
+  title = {Specification and Verification in the Field: Applying Formal Methods to BPF Just-in-Time Compilers in the Linux Kernel},
+  booktitle = {14th USENIX Symposium on Operating Systems Design and Implementation (OSDI 20)},
+  pages = {41--61},
+  year = {2020},
+  url = {https://www.usenix.org/conference/osdi20/presentation/nelson}
+}
+
+@inproceedings{jangda2019,
+  author = {Abhinav Jangda and Bobby Powers and Emery D. Berger and Arjun Guha},
+  title = {Not So Fast: Analyzing the Performance of WebAssembly vs. Native Code},
+  booktitle = {2019 USENIX Annual Technical Conference (USENIX ATC 19)},
+  pages = {107--120},
+  year = {2019},
+  url = {https://www.usenix.org/conference/atc19/presentation/jangda}
+}
+% 第7班（part-cases.md / case-jvm.md / case-v8.md / case-ruby.md）追加分。
+% references.bib への統合用。キー衝突なしを grep で確認済み。
+% v8turboshaft は第2班（tmp/bib-g2.bib）が追加済みのキーを本文で引用している。
+
+@inproceedings{chambers1989self,
+  author = {Craig Chambers and David Ungar and Elgin Lee},
+  title = {An Efficient Implementation of SELF, a Dynamically-Typed Object-Oriented Language Based on Prototypes},
+  booktitle = {Proceedings of the 1989 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA '89)},
+  pages = {49--70},
+  year = {1989},
+  doi = {10.1145/74877.74884}
+}
+
+@misc{ruby320,
+  author = {{Ruby Core Team}},
+  title = {Ruby 3.2.0 Released},
+  year = {2022},
+  url = {https://www.ruby-lang.org/en/news/2022/12/25/ruby-3-2-0-released/}
+}
+
+@misc{ruby330,
+  author = {{Ruby Core Team}},
+  title = {Ruby 3.3.0 Released},
+  year = {2023},
+  url = {https://www.ruby-lang.org/en/news/2023/12/25/ruby-3-3-0-released/}
+}
+
+@misc{jep410,
+  author = {Vladimir Kozlov},
+  title = {JEP 410: Remove the Experimental AOT and JIT Compiler},
+  year = {2021},
+  howpublished = {OpenJDK},
+  url = {https://openjdk.org/jeps/410}
+}
+
+@misc{graalvmdetach,
+  author = {{Oracle Java Platform Group}},
+  title = {Detaching GraalVM from the Java Ecosystem Train},
+  year = {2025},
+  howpublished = {Oracle Java Blog},
+  url = {https://blogs.oracle.com/java/post/detaching-graalvm-from-the-java-ecosystem-train}
+}
+
+@misc{shopifyyjit,
+  author = {Maxime Chevalier-Boisvert},
+  title = {YJIT: Building a New JIT Compiler for CRuby},
+  year = {2021},
+  howpublished = {Shopify Engineering Blog},
+  url = {https://shopify.engineering/yjit-just-in-time-compiler-cruby}
+}
+% 第8班（case-python / case-luajit / case-others / beyond-languages / glossary）追加分
+% 統合時に references.bib へ
+
+@article{neumann2011,
+  author = {Neumann, Thomas},
+  title = {Efficiently Compiling Efficient Query Plans for Modern Hardware},
+  journal = {Proceedings of the VLDB Endowment},
+  volume = {4},
+  number = {9},
+  pages = {539--550},
+  year = {2011},
+  doi = {10.14778/2002938.2002940}
 }
