@@ -471,7 +471,7 @@ end
 
 tr = record_with_snapshot(PROG, { n: 10, sum: 0, i: 0 }, 2, [:sum, :i, :n])
 p tr[1]
-# [:guard, :t, {:restore_pc=>7, :snapshot=>{:sum=>:sum, :i=>:i, :n=>:n}}]
+# [:guard, :t, {restore_pc: 7, snapshot: {sum: :sum, i: :i, n: :n}}]
 ```
 
 ガードに、抜けた先の `pc`（`7` = `halt`）と、生きている各変数の**出どころ**が
@@ -500,7 +500,7 @@ def run_trace_snap(trace, vars)
 end
 
 p run_trace_snap(tr, { n: 5, sum: 0, i: 0 })
-# {:pc=>7, :frame=>{:sum=>10, :i=>5, :n=>5}}  ← n=5 でも正しく sum=10 で戻れる
+# {pc: 7, frame: {sum: 10, i: 5, n: 5}}  ← n=5 でも正しく sum=10 で戻れる
 ```
 
 記録時は `n=10` だったのに、`n=5` で回しても `sum=10`（0+1+…+4）で正しく
@@ -737,7 +737,7 @@ end
 
 # 例：脱出時に i=7, d=14 だったら…
 p rematerialize(fields, { i: 7, d: 14 })
-# {:p=>[7, 14]}   ← 消していた p を、戻る瞬間だけ作り直す
+# {p: [7, 14]}   ← 消していた p を、戻る瞬間だけ作り直す
 ```
 
 つまりアロケーションシンキングは、「**速い道では確保を消し、外れた道に
