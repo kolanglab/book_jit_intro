@@ -1,4 +1,4 @@
-# JVM のケーススタディ（HotSpot と GraalVM）
+# ケーススタディ：JVM（HotSpot と GraalVM）
 
 ケーススタディの最初は、JIT 研究の本流である **Java 仮想マシン**（JVM）です。
 とりわけ標準実装の **HotSpot** は、20 年以上にわたって磨かれ、本書で

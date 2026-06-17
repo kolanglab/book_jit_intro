@@ -1,4 +1,4 @@
-# LuaJIT のケーススタディ
+# ケーススタディ：LuaJIT
 
 **LuaJIT** は、Mike Pall がほぼ一人で作り上げた、Lua 言語の処理系です。
 [トレーシング JIT](tracing.md)の一つの到達点であり、その完成度の高さと

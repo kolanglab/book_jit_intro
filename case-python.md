@@ -1,4 +1,4 @@
-# Python のケーススタディ（PyPy と CPython）
+# ケーススタディ：Python（PyPy と CPython）
 
 Python には、JIT への二つの対照的な道があります。一つは、別実装の
 **PyPy** が選んだ[メタトレーシング](meta-tracing.md)。もう一つは、標準

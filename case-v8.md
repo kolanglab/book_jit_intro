@@ -1,4 +1,4 @@
-# V8 のケーススタディ（JavaScript）
+# ケーススタディ：V8（JavaScript）
 
 **V8** は、Google Chrome と Node.js を動かす JavaScript エンジンです。
 [なぜ JIT か](why-jit.md)で見た動的型付けの難しさ（型による分岐、探して
